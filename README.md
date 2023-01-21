@@ -5,8 +5,7 @@ An OpenAI's Whisper-based full-stack project to transcribe audio and video files
 
 
 ## Demo
-![3_AdobeExpress](https://user-images.githubusercontent.com/119813438/213866747-c73d75d2-f7df-4446-8381-0d74a42ac681.gif)
-
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/119813438/213866880-486c1f85-c139-4c56-8dc8-98a0398ec674.gif)
 
 
 ## Installation
