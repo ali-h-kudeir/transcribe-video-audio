@@ -18,7 +18,6 @@ class TranscriptConsumer(AsyncJsonWebsocketConsumer):
     
     async def receive_json(self, content):
         file_id = content['file']
-        print(file_id)
         data = await self.transcribe.transcribe_file(file_id)
         return await self.send_json({'type': 'TRANSFORM', 'value': data})
 

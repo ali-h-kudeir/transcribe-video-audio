@@ -17,8 +17,6 @@ export default function New() {
 
     ws.current.onmessage = (evt: MessageEvent) => {
       const data = JSON.parse(evt.data);
-      console.log(data, 'data');
-
       if (data.type === 'TRANSFORM') {
         dispatch({ type: 'TRANSFORM', payload: data?.value });
         dispatch({ type: 'TRANSFORM_LOADING', payload: false });

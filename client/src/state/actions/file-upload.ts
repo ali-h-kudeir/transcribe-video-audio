@@ -29,7 +29,6 @@ export const fileUpload = async ({
   await axios
     .post(FILE_UPLOAD_URL, formData, config)
     .then(async (res) => {
-      console.log(res.data);
       dispatch({ type: 'SET_UPLOAD_STATUS', payload: res.data });
     })
     .catch(() => {

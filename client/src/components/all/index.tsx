@@ -15,12 +15,14 @@ export default function AllFiles() {
 
   return (
     <div className="grid place-items-center">
-      <button
-        onClick={() => exportJson(files)}
-        className={`flex items-center mr-auto mt-4 bg-teal-500 text-white py-1 px-4 rounded transition duration-500 ease-in-out `}
-      >
-        Export JSON
-      </button>
+      {files.length > 0 ? (
+        <button
+          onClick={() => exportJson(files)}
+          className={`flex items-center mt-10 bg-teal-500 text-white py-1 px-4 rounded transition duration-500 ease-in-out `}
+        >
+          Export JSON
+        </button>
+      ) : null}
       {files.map((file) => (
         <Video file={file} key={file.id} />
       ))}

@@ -1,3 +1,4 @@
+import { ROOT_URL } from '@/constants/urls';
 import { useCopy } from '@/hooks/use-copy';
 import { UploadedFile } from '@/state/reducers/app-reducer';
 import Indicators from './indicators';
@@ -12,12 +13,14 @@ export default function Video({ file, transformLoading }: Props) {
 
   const isVideo = file?.file.endsWith('.mp4');
 
+  const src = file?.file.startsWith('/') ? ROOT_URL + file.file : file?.file;
+
   return (
     <div className="w-full bg-[#101214] text-white py-4 px-4 rounded-md mt-5">
       {isVideo ? (
-        <video src={file?.file} width="100%" style={{ maxHeight: '500px' }} controls />
+        <video src={src} width="100%" style={{ maxHeight: '500px' }} controls />
       ) : (
-        <audio src={file?.file} controls muted />
+        <audio src={src} controls muted />
       )}
       <Indicators title={file.title} transformLoading={transformLoading} />
       <div className="text-base font-medium border-[1px] border-[#212528] p-2 my-2">
