@@ -4,6 +4,11 @@
 An OpenAI's Whisper-based full-stack project to transcribe audio and video files using React & Django.
 
 
+## Demo
+![3_AdobeExpress](https://user-images.githubusercontent.com/119813438/213866747-c73d75d2-f7df-4446-8381-0d74a42ac681.gif)
+
+
+
 ## Installation
 
 You need the latest versions of pipenv and node to setup this project.
