@@ -1,10 +1,12 @@
 from django.db import models
 from django.core.validators import FileExtensionValidator
 import datetime
+import os
 
 
 def unique_filename(_, filename):
-    name, ext = filename.split('.')
+   
+    name, ext = os.path.splitext(filename)   
     filename = f'{name}.{datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")}.{ext}'
     return filename
 
