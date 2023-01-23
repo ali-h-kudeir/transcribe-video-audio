@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+channels = "*"
+pytube = "*"
+daphne = "*"
+transformers = "*"
+setuptools = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
+pydub = "*"
+openai-whisper = {git = "https://github.com/openai/whisper.git"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.10.9"
+
+[scripts]
+server = "python manage.py runserver"
